@@ -5,55 +5,91 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Laboratorio4 {
+
     static Scanner sc = new Scanner(System.in);
     static ArrayList<Jugador> jugador = new ArrayList();
 
     public static void main(String[] args) {
-        String resp = "s";
-        while ("s".equals(resp) || "S".equals(resp)) {
-            System.out.println("1. Agregar Jugador\n"
-                    + "2. Eliminar Jugador\n"
-                    + "3. Listar Jugadores\n"
-                    + "4. Jugar"
-                    + "Ingrese la Opcion que desea realizar: ");
-            int opc = sc.nextInt();
+        Añadir();
+        Añadir();
+        System.out.println("1. Agregar Jugador\n"
+                + "2. Eliminar Jugador\n"
+                + "3. Listar Jugadores\n"
+                + "4. Jugar\n"
+                + "Ingrese la Opcion que desea realizar: ");
+        int opc = sc.nextInt();
 
-            switch (opc) {
-                case 1:
-                    Añadir();
-                    break;
+        switch (opc) {
+            case 1:
+                Añadir();
+                main(args);
+                break;
 
-                case 2:
+            case 2:
+                Eliminar();
+                main(args);
+                break;
 
-                    break;
+            case 3:
+                Listar();
+                main(args);
+                break;
 
-                case 3:
+            case 4:
+                Jugar();
+                break;
 
-                    break;
-
-                case 4:
-
-                    break;
-
-            }
         }
     }
 
-    public static void Añadir(){
+    public static void Añadir() {
         System.out.println("Ingrese el Nombre del Jugador: ");
-        String nombre=sc.next();
+        String nombre = sc.next();
         System.out.println("Ingrese el Nombre de Usuario: ");
-        String usuario=sc.next();
-        int puntuacion=0;
+        String usuario = sc.next();
+        for (Jugador jugador1 : jugador) {
+            while (jugador1.Usuario.equals(usuario)) {
+                System.out.println("El nombre de usuario ya existe: ");
+                usuario = sc.next();
+            }
+        }
+        int puntuacion = 0;
         System.out.println("Ingrese Su Lugar De Nacimiento: ");
         String lugar = sc.next();
         System.out.println("Ingrese su Edad: ");
-        int edad=sc.nextInt();
-        System.out.println("Ingrese el Sexo [F/M]:" );
-        char sexo=sc.next().charAt(0);
+        int edad = sc.nextInt();
+        System.out.println("Ingrese el Sexo [F/M]:");
+        char sexo = sc.next().toLowerCase().charAt(0);
+        while (sexo != 'f' && sexo != 'm') {
+            System.out.println("Ingrese un character apropiado");
+            sexo = sc.next().toLowerCase().charAt(0);
+        }
+        if (sexo == 'f') {
+            sexo = '♀';
+        } else {
+            sexo = '♂';
+        }
         //Recordar Modificar el Color en la Clase
-        jugador.add(new Jugador(nombre,usuario,puntuacion,lugar,edad,sexo,null));
-        
+        jugador.add(new Jugador(nombre, usuario, puntuacion, lugar, edad, sexo, null));
+
     }
 
+    public static void Eliminar() {
+        for (Jugador lista : jugador) {
+            System.out.print((jugador.indexOf(lista) + 1) + ". " + lista.Nombre);
+        }
+        System.out.print("Ingrese el numero del jugador a eliminar: ");
+        int index = sc.nextInt() - 1;
+        jugador.remove(index);
+    }
+
+    public static void Listar() {
+        for (Jugador lista : jugador) {
+            System.out.print((jugador.indexOf(lista) + 1) + ". " + lista.toString());
+        }
+    }
+
+    private static void Jugar() {
+
+    }
 }

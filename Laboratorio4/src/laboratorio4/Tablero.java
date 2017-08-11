@@ -59,7 +59,7 @@ public class Tablero {
                     if (i == 0 && j == 6) {
                         tablero[i][j] = new Mago();
                     }
-                } else {
+                } else if (i == 8 || i == 9) {
                     if ((i == 9 && (j == 0 || j == 9)) || (i == 8 && j == 5)) {
                         tablero[i][j] = new Caballero();
                     }
@@ -75,6 +75,8 @@ public class Tablero {
                     if (i == 9 && j == 6) {
                         tablero[i][j] = new Rey();
                     }
+                }else{
+                        tablero[i][j] = new Pieza();                   
                 }
             }
         }

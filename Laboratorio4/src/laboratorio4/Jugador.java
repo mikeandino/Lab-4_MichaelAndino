@@ -76,9 +76,12 @@ public class Jugador {
 
     @Override
     public String toString() {
-        return "Jugador{" + "Nombre=" + Nombre + ", Usuario=" + Usuario + ", Puntuacion=" + Puntuacion + ", Lugar=" + Lugar + ", Sexo=" + Sexo + ", color=" + color + '}';
+        return Nombre
+                + "\n     Usuario: " + Usuario
+                + "\n     Puntuacion: " + Puntuacion
+                + "\n     Lugar de Nacimiento: " + Lugar
+                + "\n     Edad: " + Edad
+                + "\n     Sexo: " + Sexo
+                + "\n     Color: " + color + "\n";
     }
-    
-    
-    
 }
