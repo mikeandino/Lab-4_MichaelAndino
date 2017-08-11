@@ -1,5 +1,6 @@
 package laboratorio4;
 
+import java.awt.Color;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -38,5 +39,20 @@ public class Laboratorio4 {
             }  
         }
     }
-
+    public static ArrayList Añadir(ArrayList jugador){
+        System.out.println("Ingrese el Nombre del Jugador: ");
+        String nombre=sc.next();
+        System.out.println("Ingrese el Nombre de Usuario: ");
+        String usuario=sc.next();
+        int puntuacion=0;
+        System.out.println("Ingrese Su Lugar De Nacimiento: ");
+        String lugar = sc.next();
+        System.out.println("Ingrese su Edad: ");
+        int edad=sc.nextInt();
+        System.out.println("Ingrese el Sexo [F/M]:" );
+        char sexo=sc.next().charAt(0);
+        //Recordar Modificar el Color en la Clase
+        jugador.add(new Jugador(nombre,usuario,puntuacion,lugar,edad,sexo,null));
+        return jugador;
+    }
 }
