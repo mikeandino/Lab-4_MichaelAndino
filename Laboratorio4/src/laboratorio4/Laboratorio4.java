@@ -76,7 +76,7 @@ public class Laboratorio4 {
 
     public static void Eliminar() {
         for (Jugador lista : jugador) {
-            System.out.print((jugador.indexOf(lista) + 1) + ". " + lista.Nombre);
+            System.out.print((jugador.indexOf(lista) + 1) + ". " + lista.Nombre+"\n");
         }
         System.out.print("Ingrese el numero del jugador a eliminar: ");
         int index = sc.nextInt() - 1;
@@ -91,9 +91,9 @@ public class Laboratorio4 {
 
     private static void Jugar() {
         for (Jugador lista : jugador) {
-            System.out.print((jugador.indexOf(lista) + 1) + ". " + lista.Nombre);
+            System.out.print((jugador.indexOf(lista) + 1) + ". " + lista.Nombre+"\n");
         }
-        System.out.print("Ingrese el numero del jugador a eliminar: ");
+        System.out.print("Ingrese el numero de los jugadores: ");
         int numero = sc.nextInt() - 1;
         int numero2 = sc.nextInt() - 1;
         Tablero tabla = new Tablero(jugador.get(numero), jugador.get(numero2));
