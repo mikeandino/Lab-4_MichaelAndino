@@ -14,6 +14,7 @@ public class Arquero extends Pieza {
     @Override
     public Pieza[][] movimiento(Pieza[][] tablero) {
         
+        
         return tablero;
     }
 
