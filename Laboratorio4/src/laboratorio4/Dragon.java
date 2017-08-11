@@ -22,5 +22,8 @@ public class Dragon extends Pieza{
         
         return tablero;
     }
-    
+    @Override
+    public String toString() {
+        return "F";
+    }
 }

@@ -23,5 +23,8 @@ public class Duende extends Pieza{
         
         return tablero;
     }
-    
+    @Override
+    public String toString() {
+        return "D";
+    }
 }
