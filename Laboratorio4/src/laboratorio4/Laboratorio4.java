@@ -102,8 +102,13 @@ public class Laboratorio4 {
     }
 
     public static void Juego(Jugador jugador1, Jugador jugador2, Pieza[][] tabla, String turno) {
+        for (int i = 0; i < tabla.length; i++) {
+            for (int j = 0; j < tabla.length; j++) {
+                System.out.println(tabla[i][j]);
+            }
+        }
         if (turno.equals("p1")) {
-
+            
         } else {
             
         }
