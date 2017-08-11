@@ -8,7 +8,7 @@ public class Mago extends Pieza {
         super();
     }
 
-    public Mago(Color color, String material, int x, int y) {
+    public Mago(Color color, String material, int x, int y) throws FueraDelTablero {
         super(color, material, x, y);
     }
 
