@@ -1,21 +1,42 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package laboratorio4;
 
-/**
- *
- * @author Elizabeth
- */
+import java.util.ArrayList;
+import java.util.Scanner;
+
 public class Laboratorio4 {
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
+    static Scanner sc = new Scanner(System.in);
+    ArrayList<Jugador> jugador= new ArrayList(); 
+
+    public static void main(String[] args) {        
+        String resp = "r";
+        while ("s".equals(resp) || "S".equals(resp)) {
+            System.out.println("1. Agregar Jugador\n"
+                    + "2. Eliminar Jugador\n"
+                    + "3. Listar Jugadores\n"
+                    + "4. Jugar"
+                    + "Ingrese la Opcion que desea realizar: ");
+            int opc = sc.nextInt();
+            
+            switch(opc){
+                case 1:
+                    
+                    break;
+                    
+                case 2:
+                    
+                    break;
+                    
+                case 3:
+                    
+                    break;
+                    
+                case 4:
+                    
+                    break;
+                    
+            }  
+        }
     }
-    
+
 }
