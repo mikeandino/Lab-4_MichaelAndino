@@ -1,8 +1,6 @@
-
 package laboratorio4;
 
 import java.awt.Color;
-
 
 public class Jugador {
     protected String Nombre;

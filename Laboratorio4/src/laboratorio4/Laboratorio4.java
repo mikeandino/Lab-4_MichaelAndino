@@ -5,12 +5,11 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Laboratorio4 {
-
     static Scanner sc = new Scanner(System.in);
-    ArrayList<Jugador> jugador= new ArrayList(); 
+    static ArrayList<Jugador> jugador = new ArrayList();
 
-    public static void main(String[] args) {        
-        String resp = "r";
+    public static void main(String[] args) {
+        String resp = "s";
         while ("s".equals(resp) || "S".equals(resp)) {
             System.out.println("1. Agregar Jugador\n"
                     + "2. Eliminar Jugador\n"
@@ -18,28 +17,29 @@ public class Laboratorio4 {
                     + "4. Jugar"
                     + "Ingrese la Opcion que desea realizar: ");
             int opc = sc.nextInt();
-            
-            switch(opc){
+
+            switch (opc) {
                 case 1:
-                    
+                    Añadir();
                     break;
-                    
+
                 case 2:
-                    
+
                     break;
-                    
+
                 case 3:
-                    
+
                     break;
-                    
+
                 case 4:
-                    
+
                     break;
-                    
-            }  
+
+            }
         }
     }
-    public static ArrayList Añadir(ArrayList jugador){
+
+    public static void Añadir(){
         System.out.println("Ingrese el Nombre del Jugador: ");
         String nombre=sc.next();
         System.out.println("Ingrese el Nombre de Usuario: ");
@@ -53,6 +53,7 @@ public class Laboratorio4 {
         char sexo=sc.next().charAt(0);
         //Recordar Modificar el Color en la Clase
         jugador.add(new Jugador(nombre,usuario,puntuacion,lugar,edad,sexo,null));
-        return jugador;
+        
     }
+
 }
