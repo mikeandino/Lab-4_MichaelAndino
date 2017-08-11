@@ -59,7 +59,7 @@ public abstract class Pieza {
         return "Pieza{" + "color=" + color + ", material=" + material + ", x=" + x + ", y=" + y + '}';
     }
 
-    public abstract Pieza [][] movimiento(Pieza [][] tablero);
+    public abstract Pieza [][] movimiento(Pieza [][] tablero) throws FueraDelTablero;
         
     
     
