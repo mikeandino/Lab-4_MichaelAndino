@@ -1,17 +1,17 @@
 package laboratorio4;
 
-public class Caballero extends Pieza{
+public class Caballero extends Pieza {
 
     @Override
     public Pieza[][] movimiento(Pieza[][] tablero) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return tablero;
+
     }
 
-    
-    public Pieza [][] comer(Pieza [][] tablero){
-        
-        
+    @Override
+    public Pieza[][] comer(Pieza[][] tablero) {
+
         return tablero;
     }
-   
+
 }
