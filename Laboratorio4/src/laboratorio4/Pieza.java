@@ -1,5 +1,6 @@
 package laboratorio4;
 
+
 import java.awt.Color;
 
 public abstract class Pieza {
