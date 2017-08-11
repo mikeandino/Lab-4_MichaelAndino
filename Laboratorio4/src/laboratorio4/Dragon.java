@@ -8,7 +8,7 @@ public class Dragon extends Pieza{
         super();
     }
 
-    public Dragon(Color color, String material, int x, int y) {
+    public Dragon(Color color, String material, int x, int y) throws FueraDelTablero {
         super(color, material, x, y);
     }
 

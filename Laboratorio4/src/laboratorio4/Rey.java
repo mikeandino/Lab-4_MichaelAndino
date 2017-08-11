@@ -8,7 +8,7 @@ public class Rey extends Pieza {
         super();
     }
 
-    public Rey(Color color, String material, int x, int y) {
+    public Rey(Color color, String material, int x, int y) throws FueraDelTablero {
         super(color, material, x, y);
     }
 

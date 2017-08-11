@@ -7,7 +7,7 @@ public class Arquero extends Pieza {
     public Arquero() {
     }
 
-    public Arquero(Color color, String material, int x, int y) {
+    public Arquero(Color color, String material, int x, int y) throws FueraDelTablero {
         super(color, material, x, y);
     }
 
