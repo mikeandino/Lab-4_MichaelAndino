@@ -22,5 +22,8 @@ public class Rey extends Pieza {
 
         return tablero;
     }
-
+    @Override
+    public String toString() {
+        return "R";
+    }
 }

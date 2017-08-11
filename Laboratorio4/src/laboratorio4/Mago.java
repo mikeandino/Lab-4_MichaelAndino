@@ -23,5 +23,8 @@ public class Mago extends Pieza {
         
         return tablero;
     }
-    
+    @Override
+    public String toString() {
+        return "M";
+    }
 }
