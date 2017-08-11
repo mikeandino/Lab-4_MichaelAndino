@@ -90,6 +90,22 @@ public class Laboratorio4 {
     }
 
     private static void Jugar() {
+        for (Jugador lista : jugador) {
+            System.out.print((jugador.indexOf(lista) + 1) + ". " + lista.Nombre);
+        }
+        System.out.print("Ingrese el numero del jugador a eliminar: ");
+        int numero = sc.nextInt() - 1;
+        int numero2 = sc.nextInt() - 1;
+        Tablero tabla = new Tablero(jugador.get(numero), jugador.get(numero2));
+        tabla.llenarTablero();
+        Juego(tabla.getJugador1(), tabla.getJugador2(), tabla.getTablero(), "p1");
+    }
 
+    public static void Juego(Jugador jugador1, Jugador jugador2, Pieza[][] tabla, String turno) {
+        if (turno.equals("p1")) {
+
+        } else {
+            
+        }
     }
 }
