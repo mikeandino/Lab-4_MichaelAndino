@@ -8,6 +8,7 @@ public abstract class Pieza {
     protected String material;
     protected int x;
     protected int y;
+    
 
     public Pieza() {
     }

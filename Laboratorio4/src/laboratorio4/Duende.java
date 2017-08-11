@@ -15,8 +15,7 @@ public class Duende extends Pieza{
 
     @Override
     public Pieza[][] movimiento(Pieza[][] tablero) throws FueraDelTablero{    
-        return tablero;
-                try {
+        try {
             System.out.println("Puedes moverte: ");
             try {
                 if (tablero[x-1][y]==null) {
