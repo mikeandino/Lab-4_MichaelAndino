@@ -12,13 +12,13 @@ public class Arquero extends Pieza {
     }
 
     @Override
-    public int[][] movimiento(Pieza[][] tablero) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public Pieza[][] movimiento(Pieza[][] tablero) {
+        
+        return tablero;
     }
 
     public Pieza [][] comer(Pieza [][] tablero){
-        int q=x;
-        int w=y;
+        
         
         
         return tablero;
