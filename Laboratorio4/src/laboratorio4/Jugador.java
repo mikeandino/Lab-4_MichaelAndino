@@ -7,20 +7,24 @@ public class Jugador {
     protected String Usuario;
     protected int Puntuacion;
     protected String Lugar;
+    protected int Edad;
     protected char Sexo;
     protected Color color;
 
     public Jugador() {
     }
 
-    public Jugador(String Nombre, String Usuario, int Puntuacion, String Lugar, char Sexo, Color color) {
+    public Jugador(String Nombre, String Usuario, int Puntuacion, String Lugar, int Edad, char Sexo, Color color) {
         this.Nombre = Nombre;
         this.Usuario = Usuario;
         this.Puntuacion = Puntuacion;
         this.Lugar = Lugar;
+        this.Edad = Edad;
         this.Sexo = Sexo;
         this.color = color;
     }
+
+    
 
     public String getNombre() {
         return Nombre;
