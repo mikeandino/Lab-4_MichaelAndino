@@ -8,7 +8,7 @@ public class Laboratorio4 {
     ArrayList<Jugador> jugador = new ArrayList();
 
     public static void main(String[] args) {
-        String resp = "r";
+        String resp = "s";
         while ("s".equals(resp) || "S".equals(resp)) {
             System.out.println("1. Agregar Jugador\n"
                     + "2. Eliminar Jugador\n"
