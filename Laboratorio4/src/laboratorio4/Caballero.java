@@ -86,7 +86,7 @@ public class Caballero extends Pieza {
                 break;
             case 3:
                 try {
-                    if (tablero[x - 1][y]==null) {
+                    if (tablero[x - 1][y] == null) {
                         tablero[x - 1][y] = tablero[x][y];
                         tablero[x][y] = null;
                         tablero[x - 1][y].setX(x - 1);

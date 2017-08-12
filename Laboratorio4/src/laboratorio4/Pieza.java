@@ -8,12 +8,11 @@ public abstract class Pieza {
     protected String material;
     protected int x;
     protected int y;
-    
 
     public Pieza() {
     }
 
-    public Pieza(Color color, String material, int x, int y) throws FueraDelTablero{
+    public Pieza(Color color, String material, int x, int y) throws FueraDelTablero {
         this.color = color;
         this.material = material;
         this.x = x;
@@ -42,7 +41,7 @@ public abstract class Pieza {
         this.material = material;
     }
 
-    public int getX(){
+    public int getX() {
         return x;
     }
 
@@ -57,7 +56,7 @@ public abstract class Pieza {
         return y;
     }
 
-    public void setY(int y) throws FueraDelTablero  {
+    public void setY(int y) throws FueraDelTablero {
         if (y < 0 || y >= 10) {
             throw new FueraDelTablero("Se sale del tablero.");
         }

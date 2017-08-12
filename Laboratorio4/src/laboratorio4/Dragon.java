@@ -2,7 +2,7 @@ package laboratorio4;
 
 import java.awt.Color;
 
-public class Dragon extends Pieza{
+public class Dragon extends Pieza {
 
     public Dragon() {
         super();
@@ -13,15 +13,16 @@ public class Dragon extends Pieza{
     }
 
     @Override
-    public Pieza[][] movimiento(Pieza[][] tablero) throws FueraDelTablero{
+    public Pieza[][] movimiento(Pieza[][] tablero) throws FueraDelTablero {
         return tablero;
     }
+
     @Override
-    public Pieza [][] comer(Pieza [][] tablero){
-        
-        
+    public Pieza[][] comer(Pieza[][] tablero) {
+
         return tablero;
     }
+
     @Override
     public String toString() {
         return "F";

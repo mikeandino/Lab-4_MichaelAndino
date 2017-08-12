@@ -13,7 +13,7 @@ public class Rey extends Pieza {
     }
 
     @Override
-    public Pieza[][] movimiento(Pieza[][] tablero) throws FueraDelTablero{
+    public Pieza[][] movimiento(Pieza[][] tablero) throws FueraDelTablero {
         return tablero;
     }
 
@@ -22,6 +22,7 @@ public class Rey extends Pieza {
 
         return tablero;
     }
+
     @Override
     public String toString() {
         return "R";

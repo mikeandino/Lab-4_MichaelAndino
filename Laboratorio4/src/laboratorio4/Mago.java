@@ -18,11 +18,11 @@ public class Mago extends Pieza {
     }
 
     @Override
-    public Pieza [][] comer(Pieza [][] tablero){
-        
-        
+    public Pieza[][] comer(Pieza[][] tablero) {
+
         return tablero;
     }
+
     @Override
     public String toString() {
         return "M";
