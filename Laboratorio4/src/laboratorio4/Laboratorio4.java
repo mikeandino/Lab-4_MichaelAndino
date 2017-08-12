@@ -102,180 +102,70 @@ public class Laboratorio4 {
     }
 
     public static void Juego(Jugador jugador1, Jugador jugador2, Pieza[][] tabla, String turno) throws FueraDelTablero {
-        /*for (int i = 0; i < tabla.length; i++) {
+        for (int i = 0; i < tabla.length; i++) {
             for (int j = 0; j < tabla[i].length; j++) {
-                if (true) {
-
+                if (tabla[i][j] != null) {
+                    System.out.print("[");
+                    switch (tabla[i][j].getClass().getSimpleName()) {
+                        case "Caballero":
+                            System.out.print("C]");
+                            break;
+                        case "Mago":
+                            System.out.print("M]");
+                            break;
+                        case "Arquero":
+                            System.out.print("A]");
+                            break;
+                        case "Duende":
+                            System.out.print("D]");
+                            break;
+                        case "Rey":
+                            System.out.print("R]");
+                            break;
+                        case "Dragon":
+                            System.out.print("F]");
+                            break;
+                    }
+                } else {
+                    System.out.print("[ ]");
                 }
-                System.out.print("[" + tabla[i][j].getClass().getSimpleName() + "]");
             }
             System.out.println();
-        }*/
+        }
         if (turno.equals("p1")) {
-            System.out.println("1. Arquero(A)\n"
-                    + "2. Caballero(C)\n"
-                    + "3. Dragon(F)\n"
-                    + "4. Duende(D)\n"
-                    + "5. Mago(M)\n"
-                    + "6. Rey(R)\n"
-                    + "Ingrese el Numero de La pieza que desea Mover");
-            int opc2 = sc.nextInt();
-            switch (opc2) {
-                case 1:
-                    System.out.println("Ingrese la posicion en la que esta: ");
-                    System.out.print("X:");
-                    int x=sc.nextInt();
-                    System.out.println();
-                    System.out.print("Y:");
-                    int y =sc.nextInt();
-                    if (tabla[x][y].getColor()==jugador1.getColor()) {
-                        tabla=tabla[x][y].movimiento(tabla);
-                    }
-                    break;
-                    
-                case 2:
-                    System.out.println("Ingrese la posicion en la que esta: ");
-                    System.out.print("X:");
-                    x=sc.nextInt();
-                    System.out.println();
-                    System.out.print("Y:");
-                    y =sc.nextInt();
-                    if (tabla[x][y].getColor()==jugador1.getColor()) {
-                        tabla=tabla[x][y].movimiento(tabla);
-                    }
-                    break;
-                    
-                case 3:
-                    System.out.println("Ingrese la posicion en la que esta: ");
-                    System.out.print("X:");
-                    x=sc.nextInt();
-                    System.out.println();
-                    System.out.print("Y:");
-                    y =sc.nextInt();
-                    if (tabla[x][y].getColor()==jugador1.getColor()) {
-                        tabla=tabla[x][y].movimiento(tabla);
-                    }
-                    break;
-                    
-                case 4:
-                    System.out.println("Ingrese la posicion en la que esta: ");
-                    System.out.print("X:");
-                    x=sc.nextInt();
-                    System.out.println();
-                    System.out.print("Y:");
-                    y =sc.nextInt();
-                    if (tabla[x][y].getColor()==jugador1.getColor()) {
-                        tabla=tabla[x][y].movimiento(tabla);
-                    }
-                    break;
-                    
-                case 5:
-                    System.out.println("Ingrese la posicion en la que esta: ");
-                    System.out.print("X:");
-                    x=sc.nextInt();
-                    System.out.println();
-                    System.out.print("Y:");
-                    y =sc.nextInt();
-                    if (tabla[x][y].getColor()==jugador1.getColor()) {
-                        tabla=tabla[x][y].movimiento(tabla);
-                    }
-                    break;
-                    
-                case 6:
-                    System.out.println("Ingrese la posicion en la que esta: ");
-                    System.out.print("X:");
-                    x=sc.nextInt();
-                    System.out.println();
-                    System.out.print("Y:");
-                    y =sc.nextInt();
-                    if (tabla[x][y].getColor()==jugador1.getColor()) {
-                        tabla=tabla[x][y].movimiento(tabla);
-                    }
-                    break;
+            System.out.println("Ingrese la posicion en la que esta: ");
+            System.out.print("X:");
+            int x = sc.nextInt();
+            System.out.println();
+            System.out.print("Y:");
+            int y = sc.nextInt();
+            while (tabla[x][y].color != jugador1.color) {
+                System.out.println("Pieza no tuya.");
+                System.out.print("X:");
+                x = sc.nextInt();
+                System.out.println();
+                System.out.print("Y:");
+                y = sc.nextInt();
             }
+            tabla = tabla[x][y].movimiento(tabla);
             Juego(jugador1, jugador2, tabla, "p2");
         } else {
-            System.out.println("1. Arquero(A)\n"
-                    + "2. Caballero(C)\n"
-                    + "3. Dragon(F)\n"
-                    + "4. Duende(D)\n"
-                    + "5. Mago(M)\n"
-                    + "6. Rey(R)\n"
-                    + "Ingrese el Numero de La pieza que desea Mover");
-            int opc2 = sc.nextInt();
-            switch (opc2) {
-                case 1:
-                    System.out.print("X:");
-                    int x=sc.nextInt();
-                    System.out.println();
-                    System.out.print("Y:");
-                    int y =sc.nextInt();
-                    if (tabla[x][y].getColor()==jugador2.getColor()) {
-                        tabla=tabla[x][y].movimiento(tabla);
-                    }
-                    break;
-                    
-                case 2:
-                    System.out.println("Ingrese la posicion en la que esta: ");
-                    System.out.print("X:");
-                    x=sc.nextInt();
-                    System.out.println();
-                    System.out.print("Y:");
-                    y =sc.nextInt();
-                    if (tabla[x][y].getColor()==jugador2.getColor()) {
-                        tabla=tabla[x][y].movimiento(tabla);
-                    }
-                    break;
-                    
-                case 3:
-                    System.out.println("Ingrese la posicion en la que esta: ");
-                    System.out.print("X:");
-                    x=sc.nextInt();
-                    System.out.println();
-                    System.out.print("Y:");
-                    y =sc.nextInt();
-                    if (tabla[x][y].getColor()==jugador2.getColor()) {
-                        tabla=tabla[x][y].movimiento(tabla);
-                    }
-                    break;
-                    
-                case 4:
-                    System.out.println("Ingrese la posicion en la que esta: ");
-                    System.out.print("X:");
-                    x=sc.nextInt();
-                    System.out.println();
-                    System.out.print("Y:");
-                    y =sc.nextInt();
-                    if (tabla[x][y].getColor()==jugador2.getColor()) {
-                        tabla=tabla[x][y].movimiento(tabla);
-                    }
-                    break;
-                    
-                case 5:
-                    System.out.println("Ingrese la posicion en la que esta: ");
-                    System.out.print("X:");
-                    x=sc.nextInt();
-                    System.out.println();
-                    System.out.print("Y:");
-                    y =sc.nextInt();
-                    if (tabla[x][y].getColor()==jugador2.getColor()) {
-                        tabla=tabla[x][y].movimiento(tabla);
-                    }
-                    break;
-                    
-                case 6:
-                    System.out.println("Ingrese la posicion en la que esta: ");
-                    System.out.print("X:");
-                    x=sc.nextInt();
-                    System.out.println();
-                    System.out.print("Y:");
-                    y =sc.nextInt();
-                    if (tabla[x][y].getColor()==jugador2.getColor()) {
-                        tabla=tabla[x][y].movimiento(tabla);
-                    }
-                    break;
+            System.out.println("Ingrese la posicion en la que esta: ");
+            System.out.print("X:");
+            int x = sc.nextInt();
+            System.out.println();
+            System.out.print("Y:");
+            int y = sc.nextInt();
+            while (tabla[x][y].color != jugador1.color) {
+                System.out.println("Pieza no tuya.");
+                System.out.print("X:");
+                x = sc.nextInt();
+                System.out.println();
+                System.out.print("Y:");
+                y = sc.nextInt();
             }
+            tabla = tabla[x][y].movimiento(tabla);
+            Juego(jugador1, jugador2, tabla, "p1");
         }
-        Juego(jugador1, jugador2, tabla, "p1");
     }
 }
