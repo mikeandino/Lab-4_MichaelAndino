@@ -16,29 +16,21 @@ public class Duende extends Pieza {
     @Override
     public Pieza[][] movimiento(Pieza[][] tablero) throws FueraDelTablero {
         try {
-            if (tablero[x][y].color.equals(Color.WHITE)) {
-                if (true) {
-                    
-    public Pieza[][] movimiento(Pieza[][] tablero) throws FueraDelTablero{    
-        try {
-            System.out.println("Puedes moverte: ");
             try {
-                if (tablero[x-1][y]==null) {
-                    System.out.println("1.Arriba");
-                }
+                System.out.println("Puedes moverte");
             } catch (Exception e) {
             }
-            try {
-                if (tablero[x][y-1]==null) {
-                    System.out.println("2.Izquierda");
-                }
+            if ( tablero[x][y] == null || tablero[x][y].color != tablero[x][y].color && tablero[x][y].color==Color.WHITE) {
+                System.out.println("1. Arriba");
+            }else{
+                System.out.println("1. Abajo");
             }
-            System.out.println("Puedes moverte: ");
-        } catch (FueraDelTablero e) {
-            System.out.println(e.getMessage());
+        }catch(Exception e){
+            
         }
         return tablero;
     }
+    
 
     @Override
     public Pieza[][] comer(Pieza[][] tablero) {
